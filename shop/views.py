@@ -43,7 +43,7 @@ def home(request):
                 item.quantity for item in cart.items.all()
             )
 
-    return render(request, "shop/index.html", {
+    return render(request, "index.html", {
         "categories": categories,
         "products": products,
         "cart_count": cart_count,
