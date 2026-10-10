@@ -43,7 +43,7 @@ def home(request):
                 item.quantity for item in cart.items.all()
             )
 
-    return render(request, "shop/index.html", {
+    return render(request, "index.html", {
         "categories": categories,
         "products": products,
         "cart_count": cart_count,
@@ -98,7 +98,7 @@ def cart_detail(request):
 
     total = sum(item.subtotal for item in items)
 
-    return render(request, "shop/cart.html", {
+    return render(request, "cart.html", {
         "items": items,
         "total": total,
     })
